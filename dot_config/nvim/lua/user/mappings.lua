@@ -40,31 +40,11 @@ return {
 		-- NeoTree
 		-- ["ff"] = { "<cmd>Neotree toggle<cr>", desc = "Toggle Explorer" },
 		-- ["ff"] = { "<cmd>Neotree focus<cr>", desc = "Focus Explorer" },
-		-- other useful stuff
-		["<leader><leader>"] = { "<esc>/<++><cr><cmd>nohlsearch<cr>c4l",
-			desc = "Jump to next '<++>' and edit it" },
 		-- call figlet
 		["tx"] = { ":r !figlet ", desc = "Focus Explorer" },
 	},
 	i = {
-		-- markdown
-		-- TODO FIX autocmd Filetype markdown inoremap <buffer> ,f <Esc>/<++><CR>:nohlsearch<CR>"_c4l
-		[",f"] = { "<Esc>/<++><CR>:nohlsearch<CR>\"_c4l", desc = "Find next <++>" },
-		["<C-e>"] = { "<Esc>/<++><CR>:nohlsearch<CR>\"_c4l", desc = "<++>" },
-		[",w"] = { "<Esc>/ <++><CR>:nohlsearch<CR>\"_c5l<CR>", desc = "<++>" },
-		[",n"] = { "---<Enter><Enter>", desc = "<++>" },
-		[",b"] = { "**** <++><Esc>F*hi", desc = "<++>" },
-		[",s"] = { "~~~~ <++><Esc>F~hi", desc = "<++>" },
-		[",i"] = { "** <++><Esc>F*i", desc = "<++>" },
-		[",d"] = { "`` <++><Esc>F`i", desc = "<++>" },
-		[",c"] = { "```<Enter><++><Enter>```<Enter><Enter><++><Esc>4kA", desc = "<++>" },
-		[",m"] = { "- [ ] ", desc = "<++>" },
-		[",p"] = { "![](<++>) <++><Esc>F[a", desc = "<++>" },
-		[",a"] = { "[](<++>) <++><Esc>F[a", desc = "<++>" },
-		[",1"] = { "#<Space><Enter><++><Esc>kA", desc = "<++>" },
-		[",2"] = { "##<Space><Enter><++><Esc>kA", desc = "<++>" },
-		[",3"] = { "###<Space><Enter><++><Esc>kA", desc = "<++>" },
-		[",4"] = { "####<Space><Enter><++><Esc>kA", desc = "<++>" },
-		[",l"] = { "--------<Enter>", desc = "<++>" },
+		-- other useful stuff
+		["<leader><leader>"] = { "<esc>/<++><cr><cmd>nohlsearch<cr>c4l", desc = "Jump to next '<++>' and edit it" },
 	}
 }

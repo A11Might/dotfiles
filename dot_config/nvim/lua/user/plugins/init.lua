@@ -1,5 +1,6 @@
 return {
   ["goolord/alpha-nvim"] = { disable = true },
+  ["folke/which-key.nvim"] = { disable = true },
   {
     "iamcco/markdown-preview.nvim",
     run = function()
