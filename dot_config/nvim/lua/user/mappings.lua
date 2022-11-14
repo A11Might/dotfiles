@@ -40,11 +40,9 @@ return {
 		-- NeoTree
 		-- ["ff"] = { "<cmd>Neotree toggle<cr>", desc = "Toggle Explorer" },
 		-- ["ff"] = { "<cmd>Neotree focus<cr>", desc = "Focus Explorer" },
+		-- other useful stuff
+		["<leader><leader>"] = { "<esc>/<++><cr><cmd>nohlsearch<cr>\"_c4l", desc = "Jump to next '<++>' and edit it" },
 		-- call figlet
 		["tx"] = { ":r !figlet ", desc = "Focus Explorer" },
 	},
-	i = {
-		-- other useful stuff
-		["<leader><leader>"] = { "<esc>/<++><cr><cmd>nohlsearch<cr>c4l", desc = "Jump to next '<++>' and edit it" },
-	}
 }
