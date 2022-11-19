@@ -116,19 +116,11 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # typora
 alias ty="open -a typora"
-# neovim
-alias vi='nvim'
-alias vim='nvim'
 # chezmoi
-alias dfi='chezmoi init'
 alias dfa='chezmoi add'
-alias dfe='chezmoi edit'
-alias dfs='chezmoi apply'
-alias dfes='chezmoi edit --apply'
 alias dfd='chezmoi cd'
 # ranger
 alias ra='ranger'
-# test
 
 # Bind key
 bindkey ';' autosuggest-execute
@@ -144,5 +136,3 @@ export LC_CTYPE="en_US.UTF-8"
 # ranger use customize config
 export RANGER_LOAD_DEFAULT_RC=false
 
-# change default editor
-export EDITOR=nvim

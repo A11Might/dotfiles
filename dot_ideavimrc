@@ -1,0 +1,74 @@
+"                  _     _                  _
+"  _ __ ___  _   _(_) __| | ___  __ ___   _(_)_ __ ___  _ __ ___
+" | '_ ` _ \| | | | |/ _` |/ _ \/ _` \ \ / / | '_ ` _ \| '__/ __|
+" | | | | | | |_| | | (_| |  __/ (_| |\ V /| | | | | | | | | (__
+" |_| |_| |_|\__, |_|\__,_|\___|\__,_| \_/ |_|_| |_| |_|_|  \___|
+"            |___/
+
+" Source your .ideavimrc
+" :source ~/.ideavimrc<cr>
+
+" ==================== Editor behavior ====================
+set scrolloff=8
+" Display relative line number
+set nu
+set rnu
+" Search highlighting
+set hlsearch
+set incsearch
+set smartcase
+set ignorecase
+
+" ==================== Basic Mappings ====================
+let mapleader = " "
+nnoremap Q :q<cr>
+nnoremap S :w<cr>
+
+" ==================== Window management ====================
+" Disable the default s key
+noremap s <nop>
+" Split the screens to below (horizontal), right (vertical)
+nnoremap sj <c-w>s
+nnoremap sl <c-w>v
+" Move the cursor around windows
+nnoremap <c-h> <c-w>h
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-l> <c-w>l
+" Close the current window
+nnoremap <leader>c <c-w>c
+
+" ==================== Tab management ====================
+" Move around tabs
+nnoremap th gT
+nnoremap tl gt
+nnoremap <s-h> gT
+nnoremap <s-l> gt
+
+" ==================== Other useful stuff ====================
+" Clear search highlight
+nnoremap <leader>sl :nohlsearch<cr>
+" Code navigation
+nnoremap gi :action GotoImplementation<cr>
+nnoremap gp :action GotoSuperMethod<cr>
+" Code actions
+nnoremap R :action RenameElement<cr>
+
+" ==================== Plugins ====================
+set easymotion
+set NERDTree
+set surround
+set multiple-cursors
+set commentary
+set argtextobj
+set highlightedyank
+
+" ==================== multiple-cursors ====================
+nmap <C-n> <Plug>NextWholeOccurrence
+xmap <C-n> <Plug>NextWholeOccurrence
+nmap <C-x> <Plug>SkipOccurrence
+xmap <C-x> <Plug>SkipOccurrence
+nmap <C-p> <Plug>RemoveOccurrence
+xmap <C-p> <Plug>RemoveOccurrence
+nmap <S-C-n> <Plug>AllWholeOccurrences
+xmap <S-C-n> <Plug>AllWholeOccurrences
