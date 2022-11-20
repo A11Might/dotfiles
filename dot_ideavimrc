@@ -36,23 +36,32 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-l> <c-w>l
 " Close the current window
-nnoremap <leader>c <c-w>c
+nnoremap <leader>cc <c-w>c
+" Close the others windows
+nmap <leader>co <action>(UnsplitAll)
 
 " ==================== Tab management ====================
 " Move around tabs
 nnoremap th gT
 nnoremap tl gt
-nnoremap <s-h> gT
-nnoremap <s-l> gt
+nnoremap H gT
+nnoremap L gt
 
 " ==================== Other useful stuff ====================
 " Clear search highlight
 nnoremap <leader>sl :nohlsearch<cr>
 " Code navigation
-nnoremap gi :action GotoImplementation<cr>
-nnoremap gp :action GotoSuperMethod<cr>
+nmap gi <action>(GotoImplementation)
+nmap gp <action>(GotoSuperMethod)
+nmap gh <action>(QuickJavaDoc)
+nmap <leader>e <action>(ActivateProjectToolWindow)
+nmap <leader>ls <action>(FileStructurePopup)
+nmap <leader>ff <action>(GotoFile)
+nmap <leader>fo <action>(RecentFiles)
+nmap <leader>fw <action>(FindInPath)
+nmap <leader>fs <action>(GotoSymbol)
 " Code actions
-nnoremap R :action RenameElement<cr>
+nmap R <action>(RenameElement)
 
 " ==================== Plugins ====================
 set easymotion
