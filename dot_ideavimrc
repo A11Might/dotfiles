@@ -42,8 +42,6 @@ nmap <leader>co <action>(UnsplitAll)
 
 " ==================== Tab management ====================
 " Move around tabs
-nnoremap th gT
-nnoremap tl gt
 nnoremap H gT
 nnoremap L gt
 
@@ -54,8 +52,10 @@ nnoremap <leader>sl :nohlsearch<cr>
 nmap gi <action>(GotoImplementation)
 nmap gp <action>(GotoSuperMethod)
 nmap gh <action>(QuickJavaDoc)
-nmap <leader>e <action>(ActivateProjectToolWindow)
+nmap ge <action>(GotoNextError)
+nmap <leader>o <action>(ActivateProjectToolWindow)
 nmap <leader>ls <action>(FileStructurePopup)
+nmap <leader>fl <action>(SelectInProjectView)
 nmap <leader>ff <action>(GotoFile)
 nmap <leader>fo <action>(RecentFiles)
 nmap <leader>fw <action>(FindInPath)
