@@ -1,0 +1,64 @@
+[
+    {
+        "key": "alt+w",
+        "command": "editor.action.smartSelect.grow",
+        "when": "editorTextFocus"
+    },
+    {
+        "key":"tab",
+        "command":"selectNextSuggestion",
+        "when":"suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+    },
+    // move the cursor around windows
+    {
+        "key":"ctrl+h",
+        "name":"Navigate left",
+        "command":"workbench.action.navigateLeft"
+    },
+    {
+        "key":"ctrl+l",
+        "name":"Navigate right",
+        "command":"workbench.action.navigateRight"
+    },
+    {
+        "key":"ctrl+k",
+        "name":"Navigate up",
+        "command":"workbench.action.navigateUp"
+    },
+    {
+        "key":"ctrl+j",
+        "name":"Navigate down",
+        "command":"workbench.action.navigateDown"
+    },
+    {
+        "key":"ctrl+n",
+        "name":"Toggle sidebar",
+        "command":"workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key":"ctrl+'",
+        "name":"Toggle terminal",
+        "command":"workbench.action.terminal.toggleTerminal"
+    },
+    // explorer operation
+    {
+        "key":"a",
+        "command":"explorer.newFile",
+        "when":"explorerViewletVisible && filesExplorerFocus && !inputFocus"
+    },
+    {
+        "key":"shift+a",
+        "command":"explorer.newFolder",
+        "when":"explorerViewletVisible && filesExplorerFocus && !inputFocus"
+    },
+    {
+        "key":"d",
+        "command":"deleteFile",
+        "when":"explorerViewletVisible && filesExplorerFocus && !inputFocus"
+    },
+    {
+        "key":"r",
+        "command":"renameFile",
+        "when":"explorerViewletVisible && filesExplorerFocus && !inputFocus"
+    }
+]

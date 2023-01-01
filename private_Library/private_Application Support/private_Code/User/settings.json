@@ -1,0 +1,238 @@
+{
+    // editor
+    "workbench.colorTheme": "GitHub Light",
+    "editor.guides.indentation": false,
+    "editor.guides.bracketPairs": true,
+    "editor.fontFamily": "'JetBrainsMono Nerd Font'",
+    "editor.fontLigatures": true,
+    "editor.fontWeight": "bold",
+    "editor.fontSize": 16, // editor, output
+    "editor.lineHeight": 1.6,
+    "debug.console.fontFamily": "'JetBrainsMono Nerd Font'",
+    "debug.console.fontSize": 16, // debug console
+    "terminal.integrated.fontFamily": "'JetBrainsMono Nerd Font'",
+    "terminal.integrated.fontSize": 16, // terminal
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 1000,
+    "http.proxy": "http://127.0.0.1:7890", // proxy
+    "http.proxySupport": "on",
+    // better comments
+    // better-comments.tags
+    // error lens
+    // "workbench.colorCustomizations": {
+    //     "errorLens.hintBackground": "#ff0000",
+    //     "errorLens.infoBackground": "#ff0000",
+    //     "errorLens.warningBackground": "#ff0000",
+    //     "errorLens.errorBackground": "#ff0000",
+    // },
+    // code run
+    "code-runner.saveAllFilesBeforeRun": true,
+    "code-runner.runInTerminal": true,
+    "code-runner.executorMap": {
+        "go": "go run",
+    },
+    // gitlens
+    "gitlens.defaultDateFormat": "YYYY-MM-DD hh:mm:ss",
+    "gitlens.defaultDateShortFormat": "YYYY-MM-DD",
+    // vim
+    // ========== basic ==========
+    "editor.cursorSurroundingLines": 8, // scroll off
+    "editor.lineNumbers": "relative", // display relative line number
+    "vim.useSystemClipboard": false,
+    "vim.hlsearch": true, // search highlighting
+    "vim.incsearch": true,
+    "vim.smartcase": true,
+    "vim.ignorecase": true,
+    // ========== mapping ==========
+    "vim.leader": "<space>",
+    "vim.useCtrlKeys": true,
+    "vim.handleKeys": {
+        "<C-d>": true,
+    },
+    "vim.normalModeKeyBindings": [
+        {
+            "before": [
+                "Q"
+            ],
+            "commands": [
+                ":q"
+            ]
+        },
+        {
+            "before": [
+                "S"
+            ],
+            "commands": [
+                "editor.action.format",
+                ":w"
+            ]
+        },
+        // {
+        //     // disable the default s key
+        //     "before":[
+        //         "s"
+        //     ],
+        //     "after":[
+        //         "<nop>"
+        //     ]
+        // },
+        {
+            // search highlight clear
+            "before": [
+                "<leader>",
+                "s",
+                "l"
+            ],
+            "commands": [
+                ":nohl"
+            ]
+        },
+        {
+            // find next and center this line
+            "before": [
+                "n"
+            ],
+            "after": [
+                "n",
+                "z",
+                "z"
+            ]
+        },
+        {
+            // find preview and center this line
+            "before": [
+                "N"
+            ],
+            "after": [
+                "N",
+                "z",
+                "z"
+            ]
+        },
+        // move around tabs
+        {
+            // show next tab
+            "before": [
+                "L"
+            ],
+            "after": [
+                "g",
+                "t"
+            ]
+        },
+        {
+            // show preview tab
+            "before": [
+                "H"
+            ],
+            "after": [
+                "g",
+                "T"
+            ]
+        },
+        // other useful stuff
+        {
+            // next error/warning/...
+            "before": [
+                "g",
+                "e"
+            ],
+            "commands": [
+                "editor.action.marker.next"
+            ]
+        },
+        {
+            // code run
+            "before": [
+                "<leader>",
+                "r",
+                "r"
+            ],
+            "commands": [
+                "code-runner.run"
+            ]
+        },
+        {
+            // code stop
+            "before": [
+                "<leader>",
+                "r",
+                "s"
+            ],
+            "commands": [
+                "code-runner.stop"
+            ]
+        },
+        {
+            // rename
+            "before": [
+                "R"
+            ],
+            "commands": [
+                "editor.action.rename"
+            ]
+        },
+        {
+            // open explore
+            "before": [
+                "<leader>",
+                "e"
+            ],
+            "commands": [
+                "workbench.view.explorer"
+            ]
+        },
+        {
+            // show all file
+            "before": [
+                "<leader>",
+                "f",
+                "f"
+            ],
+            "commands": [
+                "workbench.action.quickOpen"
+            ]
+        },
+        {
+            // show recently file
+            "before": [
+                "<leader>",
+                "f",
+                "o"
+            ],
+            "commands": [
+                "workbench.action.showAllEditorsByMostRecentlyUsed"
+            ]
+        },
+        {
+            // search keyword in directory
+            "before": [
+                "<leader>",
+                "f",
+                "w"
+            ],
+            "commands": [
+                "workbench.view.search"
+            ]
+        },
+        {
+            // list all symbol
+            "before": [
+                "<leader>",
+                "l",
+                "s"
+            ],
+            "commands": [
+                "workbench.action.gotoSymbol"
+            ]
+        }
+    ],
+    // ========== plugin ==========
+    "vim.surround": true,
+    "vim.sneak": true,
+    "vim.easymotion": true,
+    // other
+    "settingsSync.ignoredExtensions": [
+        "leetcode.vscode-leetcode"
+    ],
+}
