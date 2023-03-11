@@ -1,6 +1,6 @@
 {
     // editor
-    "workbench.colorTheme": "GitHub Light",
+    "workbench.colorTheme": "Eva Dark Bold",
     "editor.guides.indentation": false,
     "editor.guides.bracketPairs": true,
     "editor.fontFamily": "'JetBrainsMono Nerd Font'",
@@ -14,8 +14,7 @@
     "terminal.integrated.fontSize": 16, // terminal
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 1000,
-    "http.proxy": "http://127.0.0.1:7890", // proxy
-    "http.proxySupport": "on",
+    "http.proxy": "http://127.0.0.1:7890",
     // better comments
     // better-comments.tags
     // error lens
@@ -26,6 +25,7 @@
     //     "errorLens.errorBackground": "#ff0000",
     // },
     // code run
+    "http.proxySupport": "on",
     "code-runner.saveAllFilesBeforeRun": true,
     "code-runner.runInTerminal": true,
     "code-runner.executorMap": {
@@ -36,13 +36,15 @@
     "gitlens.defaultDateShortFormat": "YYYY-MM-DD",
     // vim
     // ========== basic ==========
-    "editor.cursorSurroundingLines": 8, // scroll off
+    // "editor.cursorSurroundingLines": 8, // scroll off
     "editor.lineNumbers": "relative", // display relative line number
     "vim.useSystemClipboard": false,
     "vim.hlsearch": true, // search highlighting
     "vim.incsearch": true,
     "vim.smartcase": true,
     "vim.ignorecase": true,
+    "vim.highlightedyank.enable": true, // yank highlighting
+    "vim.highlightedyank.color": "rgba(250, 240, 170, 0.5)",
     // ========== mapping ==========
     "vim.leader": "<space>",
     "vim.useCtrlKeys": true,
@@ -153,6 +155,17 @@
             ]
         },
         {
+            // code debug
+            "before": [
+                "<leader>",
+                "r",
+                "d"
+            ],
+            "commands": [
+                "workbench.action.debug.start"
+            ]
+        },
+        {
             // code stop
             "before": [
                 "<leader>",
@@ -230,9 +243,14 @@
     // ========== plugin ==========
     "vim.surround": true,
     "vim.sneak": true,
-    "vim.easymotion": true,
+    "vim.easymotion": false,
     // other
     "settingsSync.ignoredExtensions": [
         "leetcode.vscode-leetcode"
     ],
+    "go.toolsManagement.autoUpdate": true,
+    "editor.suggest.showWords": false,
+    "git.openRepositoryInParentFolders": "never",
+    "go.lintTool": "golangci-lint",
+    "go.formatTool": "gofmt",
 }

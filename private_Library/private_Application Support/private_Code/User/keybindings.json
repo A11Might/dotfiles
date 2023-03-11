@@ -1,9 +1,5 @@
+// 将键绑定放在此文件中以覆盖默认值auto[]
 [
-    {
-        "key": "alt+w",
-        "command": "editor.action.smartSelect.grow",
-        "when": "editorTextFocus"
-    },
     {
         "key":"tab",
         "command":"selectNextSuggestion",
@@ -60,5 +56,19 @@
         "key":"r",
         "command":"renameFile",
         "when":"explorerViewletVisible && filesExplorerFocus && !inputFocus"
-    }
+    },
+    {
+        "key": "cmd+p",
+        "command": "editor.action.triggerParameterHints",
+        "when": "editorHasSignatureHelpProvider && editorTextFocus"
+    },
+    {
+        "key": "alt+w",
+        "command": "editor.action.smartSelect.grow"
+    },
+    {
+        "key": "alt+enter",
+        "command": "editor.action.quickFix",
+        "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+    },
 ]
