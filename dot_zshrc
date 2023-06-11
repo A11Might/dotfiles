@@ -121,6 +121,8 @@ alias dfa='chezmoi add'
 alias dfd='chezmoi cd'
 # ranger
 alias ra='ranger'
+# lazygit
+alias lg='lazygit'
 
 # Bind key
 bindkey ';' autosuggest-execute
@@ -136,3 +138,30 @@ export LC_CTYPE="en_US.UTF-8"
 # ranger use customize config
 export RANGER_LOAD_DEFAULT_RC=false
 
+# q
+# https://github.com/ryboe/q
+qq() {
+    clear
+
+    logpath="$TMPDIR/q"
+    if [[ -z "$TMPDIR" ]]; then
+        logpath="/tmp/q"
+    fi
+
+    if [[ ! -f "$logpath" ]]; then
+        echo 'Q LOG' > "$logpath"
+    fi
+
+    tail -100f -- "$logpath"
+}
+
+rmqq() {
+    logpath="$TMPDIR/q"
+    if [[ -z "$TMPDIR" ]]; then
+        logpath="/tmp/q"
+    fi
+    if [[ -f "$logpath" ]]; then
+        rm "$logpath"
+    fi
+    qq
+}
