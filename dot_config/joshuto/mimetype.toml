@@ -32,7 +32,7 @@ video_default = [
 ]
 
 text_default = [
-  { command = "vim" },
+  { command = "nvim" },
   { command = "gedit", fork = true, silent = true },
   { command = "bat", args = [
     "--paging=always",
