@@ -1,12 +1,15 @@
 {
-    // editor
-    "workbench.colorTheme": "Eva Dark Bold",
+    // -- general
+    "workbench.colorTheme": "Everforest Dark",
     "editor.guides.indentation": false,
     "editor.guides.bracketPairs": true,
+    "editor.suggest.insertMode": "replace",
+    "editor.suggest.showWords": false,
+    "editor.minimap.enabled": false,
     "editor.fontFamily": "'JetBrainsMono Nerd Font'",
     "editor.fontLigatures": true,
-    "editor.fontWeight": "bold",
-    "editor.fontSize": 16, // editor, output
+    "editor.fontWeight": "normal",
+    "editor.fontSize": 15, // editor, output
     "editor.lineHeight": 1.6,
     "debug.console.fontFamily": "'JetBrainsMono Nerd Font'",
     "debug.console.fontSize": 16, // debug console
@@ -14,38 +17,34 @@
     "terminal.integrated.fontSize": 16, // terminal
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 1000,
-    "http.proxy": "http://127.0.0.1:7890",
-    // better comments
-    // better-comments.tags
-    // error lens
-    // "workbench.colorCustomizations": {
-    //     "errorLens.hintBackground": "#ff0000",
-    //     "errorLens.infoBackground": "#ff0000",
-    //     "errorLens.warningBackground": "#ff0000",
-    //     "errorLens.errorBackground": "#ff0000",
-    // },
-    // code run
-    "http.proxySupport": "on",
+    "editor.formatOnSave": true,
+    // "http.proxy": "http://127.0.0.1:7890",
+    // "http.proxySupport": "on",
+    // -- code run
     "code-runner.saveAllFilesBeforeRun": true,
     "code-runner.runInTerminal": true,
     "code-runner.executorMap": {
         "go": "go run",
     },
-    // gitlens
-    "gitlens.defaultDateFormat": "YYYY-MM-DD hh:mm:ss",
-    "gitlens.defaultDateShortFormat": "YYYY-MM-DD",
-    // vim
-    // ========== basic ==========
+    // git blame
+    "gitblame.inlineMessageEnabled": true,
+    "gitblame.inlineMessageFormat": "${author.name}, ${author.date} · ${commit.summary}",
+    // -- vim
+    // editor behavior
     // "editor.cursorSurroundingLines": 8, // scroll off
+    "editor.stickyScroll.enabled": true,
     "editor.lineNumbers": "relative", // display relative line number
+    "zenMode.hideLineNumbers": false,
     "vim.useSystemClipboard": false,
+    "vim.foldfix": true, // fold lines do not open when cursor through
     "vim.hlsearch": true, // search highlighting
     "vim.incsearch": true,
     "vim.smartcase": true,
     "vim.ignorecase": true,
     "vim.highlightedyank.enable": true, // yank highlighting
     "vim.highlightedyank.color": "rgba(250, 240, 170, 0.5)",
-    // ========== mapping ==========
+    "vim.highlightedyank.textColor": "white",
+    // mapping
     "vim.leader": "<space>",
     "vim.useCtrlKeys": true,
     "vim.handleKeys": {
@@ -69,15 +68,51 @@
                 ":w"
             ]
         },
-        // {
-        //     // disable the default s key
-        //     "before":[
-        //         "s"
-        //     ],
-        //     "after":[
-        //         "<nop>"
-        //     ]
-        // },
+        {
+            // split the screens to below (horizontal)
+            "before": [
+                "s",
+                "j"
+            ],
+            "after": [
+                "<C-w>",
+                "s"
+            ]
+        },
+        {
+            // split the screens to right (vertical)
+            "before": [
+                "s",
+                "l"
+            ],
+            "after": [
+                "<C-w>",
+                "v"
+            ]
+        },
+        {
+            // close the current window
+            "before": [
+                "<leader>",
+                "c",
+                "c"
+            ],
+            "after": [
+                "<C-w>",
+                "c"
+            ]
+        },
+        {
+            // close the other windows
+            "before": [
+                "<leader>",
+                "c",
+                "o"
+            ],
+            "commands": [
+                "workbench.action.closeOtherEditors"
+            ]
+        },
         {
             // search highlight clear
             "before": [
@@ -111,7 +146,6 @@
                 "z"
             ]
         },
-        // move around tabs
         {
             // show next tab
             "before": [
@@ -132,9 +166,19 @@
                 "T"
             ]
         },
-        // other useful stuff
+        {
+            // go to implementation
+            "before": [
+                "g",
+                "i"
+            ],
+            "commands": [
+                "editor.action.goToImplementation"
+            ]
+        },
         {
             // next error/warning/...
+            // prev error/warning/...
             "before": [
                 "g",
                 "e"
@@ -225,7 +269,8 @@
                 "w"
             ],
             "commands": [
-                "workbench.view.search"
+                // "workbench.view.search"
+                "workbench.action.experimental.quickTextSearch"
             ]
         },
         {
@@ -240,17 +285,18 @@
             ]
         }
     ],
-    // ========== plugin ==========
+    // plugin
     "vim.surround": true,
-    "vim.sneak": true,
+    "vim.sneak": false,
     "vim.easymotion": false,
-    // other
+    // -- other
     "settingsSync.ignoredExtensions": [
         "leetcode.vscode-leetcode"
     ],
-    "go.toolsManagement.autoUpdate": true,
-    "editor.suggest.showWords": false,
     "git.openRepositoryInParentFolders": "never",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "diffEditor.hideUnchangedRegions.enabled": true,
+    "go.toolsManagement.autoUpdate": true,
     "go.lintTool": "golangci-lint",
     "go.formatTool": "gofmt",
 }

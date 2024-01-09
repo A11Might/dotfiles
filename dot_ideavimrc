@@ -23,6 +23,9 @@ set ignorecase
 let mapleader = " "
 nnoremap Q :q<cr>
 nnoremap S :w<cr>
+" Beginning or end of line
+imap <c-a> <esc>^i
+imap <c-e> <end>
 
 " ==================== Window management ====================
 " Disable the default s key
@@ -38,7 +41,9 @@ nnoremap <c-l> <c-w>l
 " Close the current window
 nnoremap <leader>cc <c-w>c
 " Close the others windows
-nmap <leader>co <action>(UnsplitAll)
+nmap <leader>co <action>(CloseAllEditorsButActive)
+" Close all windows
+nmap <leader>cl <action>(CloseAllEditors)
 
 " ==================== Tab management ====================
 " Move around tabs
@@ -53,7 +58,7 @@ nmap gi <action>(GotoImplementation)
 nmap gp <action>(GotoSuperMethod)
 nmap gh <action>(QuickJavaDoc)
 nmap ge <action>(GotoNextError)
-nmap <leader>o <action>(ActivateProjectToolWindow)
+nmap <leader>e <action>(ActivateProjectToolWindow)
 nmap <leader>ls <action>(FileStructurePopup)
 nmap <leader>fl <action>(SelectInProjectView)
 nmap <leader>ff <action>(GotoFile)
@@ -62,6 +67,9 @@ nmap <leader>fw <action>(FindInPath)
 nmap <leader>fs <action>(GotoSymbol)
 " Code actions
 nmap R <action>(RenameElement)
+" Code run
+nmap <leader>rr <action>(RunClass)
+nmap <leader>rd <action>(DebugClass)
 
 " ==================== Plugins ====================
 set easymotion
