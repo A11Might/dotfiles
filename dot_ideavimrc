@@ -39,7 +39,7 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-l> <c-w>l
 " Close the current window
-nnoremap <leader>cc <c-w>c
+nmap <leader>cc <action>(CloseEditor)
 " Close the others windows
 nmap <leader>co <action>(CloseAllEditorsButActive)
 " Close all windows
@@ -65,6 +65,7 @@ nmap <leader>ff <action>(GotoFile)
 nmap <leader>fo <action>(RecentFiles)
 nmap <leader>fw <action>(FindInPath)
 nmap <leader>fs <action>(GotoSymbol)
+nmap <leader>fu <action>(Tool.GotoRequestService)
 " Code actions
 nmap R <action>(RenameElement)
 " Code run

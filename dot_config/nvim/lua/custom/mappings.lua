@@ -1,5 +1,56 @@
 local M = {}
 
+M.general = {
+  i = {
+    ["<C-a>"] = { "<ESC>^i", "Beginning of line" },
+  },
+
+  n = {
+    ["<leader>sl"] = { ":noh <CR>", "Clear highlights" },
+  },
+}
+
+M.tabufline = {
+  n = {
+    -- cycle through buffers
+    ["L"] = {
+      function()
+        require("nvchad_ui.tabufline").tabuflineNext()
+      end,
+      "Goto next buffer",
+    },
+
+    ["H"] = {
+      function()
+        require("nvchad_ui.tabufline").tabuflinePrev()
+      end,
+      "Goto prev buffer",
+    },
+  },
+}
+
+M.nvterm = {
+  t = {
+    -- toggle in terminal mode
+    ["<C-'>"] = {
+      function()
+        require("nvterm.terminal").toggle "float"
+      end,
+      "Toggle floating term",
+    },
+  },
+
+  n = {
+    -- toggle in normal mode
+    ["<C-'>"] = {
+      function()
+        require("nvterm.terminal").toggle "float"
+      end,
+      "Toggle floating term",
+    },
+  },
+}
+
 M.dap = {
   plugin = true,
   n = {

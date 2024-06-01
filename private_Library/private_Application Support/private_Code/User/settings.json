@@ -269,8 +269,7 @@
                 "w"
             ],
             "commands": [
-                // "workbench.view.search"
-                "workbench.action.experimental.quickTextSearch"
+                "workbench.action.quickTextSearch",
             ]
         },
         {
@@ -289,14 +288,50 @@
     "vim.surround": true,
     "vim.sneak": false,
     "vim.easymotion": false,
-    // -- other
-    "settingsSync.ignoredExtensions": [
-        "leetcode.vscode-leetcode"
+    // -- lua
+    "Lua.runtime.version": "Lua 5.4",
+    "Lua.diagnostics.disable": [
+        "undefined-global",
+        "lowercase-global"
     ],
-    "git.openRepositoryInParentFolders": "never",
-    "diffEditor.ignoreTrimWhitespace": false,
-    "diffEditor.hideUnchangedRegions.enabled": true,
+    "Lua.diagnostics.globals": [
+        "playdate",
+        "import"
+    ],
+    "Lua.runtime.nonstandardSymbol": [
+        "+=",
+        "-=",
+        "*=",
+        "/="
+    ],
+    "Lua.workspace.library": [
+        "$PLAYDATE_SDK_PATH/CoreLibs"
+    ],
+    "Lua.workspace.preloadFileSize": 1000,
+    // -- golang
     "go.toolsManagement.autoUpdate": true,
     "go.lintTool": "golangci-lint",
     "go.formatTool": "gofmt",
+    "go.alternateTools": {
+        "go": "/opt/homebrew/bin/go"
+    },
+    // -- other
+    "settingsSync.ignoredExtensions": [
+        // "leetcode.vscode-leetcode",
+    ],
+    "extensions.autoUpdate": "onlyEnabledExtensions",
+    "extensions.ignoreRecommendations": true,
+    "workbench.settings.editor": "json",
+    "git.openRepositoryInParentFolders": "never",
+    "diffEditor.hideUnchangedRegions.enabled": true,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.largeFileOptimizations": false,
+    // leetcode
+    "leetcode.endpoint": "leetcode-cn",
+    "leetcode.workspaceFolder": "/Users/kohath/.leetcode",
+    "leetcode.defaultLanguage": "java",
+    "leetcode.hint.configWebviewMarkdown": false,
+    "leetcode.hint.commandShortcut": false,
+    "leetcode.showDescription": "In Webview",
+    "leetcode.hint.commentDescription": false,
 }

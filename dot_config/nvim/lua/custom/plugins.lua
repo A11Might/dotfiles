@@ -47,5 +47,16 @@ local plugins = {
       vim.cmd [[silent! GoInstallDeps]]
     end,
   },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        -- defaults 
+        "lua",
+        -- dev
+        "go",
+      },
+    },
+  },
 }
 return plugins

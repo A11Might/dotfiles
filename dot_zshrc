@@ -4,7 +4,11 @@
 # export PATH="/opt/homebrew/Cellar/node/18.0.0/bin:$PATH"
 export PATH="/Users/huqihang/Library/Python/3.8/bin:$PATH"
 export PATH=$PATH:~/go/bin
+export PATH="$PATH:/Users/kohath/development/flutter/bin"
+export PATH="$PATH:/Applications/IntelliJ IDEA CE.app/Contents/MacOS"
+export PLAYDATE_SDK_PATH="/Users/kohath/Developer/PlaydateSDK"
 # export GOPATH="/Users/huqihang/go"
+export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -117,6 +121,8 @@ source $ZSH/oh-my-zsh.sh
 alias ty="open -a typora"
 alias dfa='chezmoi add'
 alias dfd='chezmoi cd'
+alias dfdf='chezmoi diff'
+alias dfap='chezmoi apply'
 # alias ra='ranger'
 alias ra='joshuto'
 alias lg='lazygit'
