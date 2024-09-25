@@ -103,7 +103,7 @@ source $ZSH/oh-my-zsh.sh
 #   export EDITOR='mvim'
 # fi
 # fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source <(fzf --zsh)
 # autojupm
 [ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
 
@@ -123,11 +123,10 @@ alias dfa='chezmoi add'
 alias dfd='chezmoi cd'
 alias dfdf='chezmoi diff'
 alias dfap='chezmoi apply'
-# alias ra='ranger'
-alias ra='joshuto'
 alias lg='lazygit'
 alias vi='nvim'
 alias vim='nvim'
+alias tmux='zellij'
 
 # Bind key
 bindkey ';' autosuggest-execute
@@ -139,9 +138,6 @@ bindkey ';' autosuggest-execute
 
 # Bubbletea rendering issues
 export LC_CTYPE="en_US.UTF-8"
-
-# ranger use customize config
-export RANGER_LOAD_DEFAULT_RC=false
 
 # q
 # git clone https://github.com/ryboe/q "$(go env GOPATH)"/src/q
@@ -169,4 +165,14 @@ rmqq() {
         rm "$logpath"
     fi
     qq
+}
+
+# yazi
+function ra() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
 }
