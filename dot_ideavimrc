@@ -22,7 +22,7 @@ set ignorecase
 " ==================== Basic Mappings ====================
 let mapleader = " "
 nnoremap Q :q<cr>
-nnoremap S :w<cr>
+nnoremap S :w<cr>:action ReformatCode<cr>
 " Beginning or end of line
 imap <c-a> <esc>^i
 imap <c-e> <end>

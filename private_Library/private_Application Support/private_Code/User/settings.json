@@ -3,7 +3,7 @@
     "workbench.colorTheme": "Everforest Dark",
     "editor.guides.indentation": false,
     "editor.guides.bracketPairs": true,
-    "editor.suggest.insertMode": "replace",
+    "editor.suggest.insertMode": "insert",
     "editor.suggest.showWords": false,
     "editor.minimap.enabled": false,
     "editor.fontFamily": "'JetBrainsMono Nerd Font'",
@@ -315,9 +315,18 @@
     "go.alternateTools": {
         "go": "/opt/homebrew/bin/go"
     },
+    // -- dart
+    "[dart]": {
+        "editor.suggest.insertMode": "insert",
+    },
     // -- other
     "settingsSync.ignoredExtensions": [
-        // "leetcode.vscode-leetcode",
+        "ms-vscode-remote.remote-wsl",
+        "natizyskunk.sftp",
+        "ms-vscode.remote-explorer",
+        "ms-vscode-remote.remote-ssh-edit",
+        "postman.postman-for-vscode",
+        "ms-vscode-remote.remote-ssh"
     ],
     "extensions.autoUpdate": "onlyEnabledExtensions",
     "extensions.ignoreRecommendations": true,
@@ -326,6 +335,7 @@
     "diffEditor.hideUnchangedRegions.enabled": true,
     "diffEditor.ignoreTrimWhitespace": false,
     "editor.largeFileOptimizations": false,
+    "security.workspace.trust.untrustedFiles": "open",
     // leetcode
     "leetcode.endpoint": "leetcode-cn",
     "leetcode.workspaceFolder": "/Users/kohath/.leetcode",
