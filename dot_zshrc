@@ -176,3 +176,6 @@ function ra() {
 	fi
 	rm -f -- "$tmp"
 }
+
+# change default editor
+export EDITOR=nvim
