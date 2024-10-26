@@ -180,5 +180,5 @@ alias ty="open -a typora"
 alias lg='lazygit'
 alias vi='nvim'
 alias vim='nvim'
-alias tmux='zellij'
+# alias tmux='zellij'
 alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
