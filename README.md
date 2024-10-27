@@ -31,3 +31,5 @@ chezmoi diff
 ```bash
 chezmoi apply
 ```
+
+5. Enjoying it, my [keymaps](/keymaps.md)
