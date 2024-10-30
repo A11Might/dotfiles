@@ -23,6 +23,7 @@
 | key        | command     | description          |
 |------------|-------------|----------------------|
 | `<prefix>c`  |             | create new window    |
+| `<prefix>&`  |             | close window         |
 | `<prefix>,`  |             | rename window        |
 | `<prefix>1`  |             | switch window 1      |
 | `<prefix>w`  |             | open window list     |
@@ -33,10 +34,16 @@
 |------------|-------------|----------------------|
 | `<prefix>-`  |             | split pane below     |
 | `<prefix>\|` |             | split pane right     |
+| `<option>H`  |             | resize pane to left  |
+| `<option>J`  |             | resize pane to down  |
+| `<option>H`  |             | resize pane to upper |
+| `<option>L`  |             | resize pane to right |
 | `<C-h>`      |             | go to left pane      |
 | `<C-j>`      |             | go to lower pane     |
 | `<C-k>`      |             | go to upper pane     |
 | `<C-l>`      |             | go to right pane     |
+| `<prefix><`  |             | swap pane to left    |
+| `<prefix>>`  |             | swap pane to right   |
 | `<prefix>z`  |             | toggle pane maximize |
 | `<prefix>x`  |             | close pane           |
 
@@ -58,6 +65,7 @@
 | key        | command | description        |
 |------------|---------|--------------------|
 | `<leader>uh` |         | toggle inlay hints |
+| `<leader>sk` |         | Key Maps           |
 
 ### Debug
 
