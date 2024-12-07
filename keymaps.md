@@ -82,7 +82,7 @@
 
 ### Markdown
 
-| key        | command | description            |
-|------------|---------|------------------------|
-| `<leader>um` |         | toggle markdown render |
-| `<leader>cp` |         | markdown preview       |
+| key        | command | description             |
+|------------|---------|-------------------------|
+| `<leader>um` |         | toggle markdown render  |
+| `<leader>cp` |         | toggle markdown preview |
