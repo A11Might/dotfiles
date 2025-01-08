@@ -5,5 +5,6 @@ return {
   keys = {
     { "<f7>", function() require("dap").step_into() end, desc = "Step Into" },
     { "<f8>", function() require("dap").step_over() end, desc = "Step Over" },
+    { "<f9>", function() require("dap").continue() end, desc = "Run/Continue" },
   },
 }
