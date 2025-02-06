@@ -47,7 +47,7 @@
         "command": "workbench.action.toggleSidebarVisibility"
     },
     {
-        "key": "ctrl+'",
+        "key": "ctrl+/",
         "name": "Toggle terminal",
         "command": "workbench.action.terminal.toggleTerminal"
     },
