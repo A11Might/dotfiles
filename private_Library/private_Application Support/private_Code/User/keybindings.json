@@ -1,11 +1,11 @@
 // 将键绑定放在此文件中以覆盖默认值auto[]
 [
     // general
-    {
-        "key": "tab",
-        "command": "selectNextSuggestion",
-        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
-    },
+    // {
+    //     "key": "tab",
+    //     "command": "selectNextSuggestion",
+    //     "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+    // },
     {
         "key": "alt+w",
         "command": "editor.action.smartSelect.grow"
@@ -47,7 +47,7 @@
         "command": "workbench.action.toggleSidebarVisibility"
     },
     {
-        "key": "ctrl+'",
+        "key": "ctrl+/",
         "name": "Toggle terminal",
         "command": "workbench.action.terminal.toggleTerminal"
     },
@@ -85,5 +85,5 @@
     {
         "key": "cmd+'",
         "command": "leetcode.testSolution"
-    }
+    },
 ]

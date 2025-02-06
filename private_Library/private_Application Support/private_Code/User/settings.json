@@ -50,6 +50,17 @@
     "vim.handleKeys": {
         "<C-d>": true,
     },
+    "vim.normalModeKeyBindingsNonRecursive": [
+        // flash.nvim
+        {
+            "before": [
+                "s"
+            ],
+            "commands": [
+                "flash-vscode.start"
+            ]
+        },
+    ],
     "vim.normalModeKeyBindings": [
         {
             "before": [
@@ -71,8 +82,8 @@
         {
             // split the screens to below (horizontal)
             "before": [
-                "s",
-                "j"
+                "<leader>",
+                "-"
             ],
             "after": [
                 "<C-w>",
@@ -82,8 +93,8 @@
         {
             // split the screens to right (vertical)
             "before": [
-                "s",
-                "l"
+                "<leader>",
+                "|"
             ],
             "after": [
                 "<C-w>",
@@ -94,8 +105,8 @@
             // close the current window
             "before": [
                 "<leader>",
-                "c",
-                "c"
+                "b",
+                "d"
             ],
             "after": [
                 "<C-w>",
@@ -116,9 +127,7 @@
         {
             // search highlight clear
             "before": [
-                "<leader>",
-                "s",
-                "l"
+                "<esc>",
             ],
             "commands": [
                 ":nohl"
@@ -167,24 +176,72 @@
             ]
         },
         {
-            // go to implementation
+            // references
             "before": [
                 "g",
-                "i"
+                "r"
+            ],
+            "commands": [
+                "editor.action.goToReferences"
+            ]
+        },
+        {
+            // goto implementation
+            "before": [
+                "g",
+                "I"
             ],
             "commands": [
                 "editor.action.goToImplementation"
             ]
         },
         {
-            // next error/warning/...
-            // prev error/warning/...
+            // goto t[y]pe definition
             "before": [
                 "g",
+                "y"
+            ],
+            "commands": [
+                "editor.action.goToTypeDefinition"
+            ]
+        },
+        {
+            // goto declaration
+            "before": [
+                "g",
+                "D"
+            ],
+            "commands": [
+                "editor.action.goToDeclaration"
+            ]
+        },
+        {
+            // hover
+            "before": [
+                "K"
+            ],
+            "commands": [
+                "editor.action.showHover"
+            ]
+        },
+        {
+            // next error/warning/...
+            "before": [
+                "]",
                 "e"
             ],
             "commands": [
                 "editor.action.marker.next"
+            ]
+        },
+        {
+            // prev error/warning/...
+            "before": [
+                "[",
+                "e"
+            ],
+            "commands": [
+                "editor.action.marker.prev"
             ]
         },
         {
@@ -223,7 +280,9 @@
         {
             // rename
             "before": [
-                "R"
+                "<leader>",
+                "c",
+                "r"
             ],
             "commands": [
                 "editor.action.rename"
@@ -255,7 +314,7 @@
             "before": [
                 "<leader>",
                 "f",
-                "o"
+                "r"
             ],
             "commands": [
                 "workbench.action.showAllEditorsByMostRecentlyUsed"
@@ -265,7 +324,7 @@
             // search keyword in directory
             "before": [
                 "<leader>",
-                "f",
+                "s",
                 "w"
             ],
             "commands": [
@@ -273,14 +332,25 @@
             ]
         },
         {
-            // list all symbol
+            // list symbols in editor
             "before": [
                 "<leader>",
-                "l",
+                "s",
                 "s"
             ],
             "commands": [
                 "workbench.action.gotoSymbol"
+            ]
+        },
+        {
+            // list symbols in workspace
+            "before": [
+                "<leader>",
+                "s",
+                "S"
+            ],
+            "commands": [
+                "workbench.action.showAllSymbols"
             ]
         }
     ],
@@ -314,6 +384,22 @@
     "go.formatTool": "gofmt",
     "go.alternateTools": {
         "go": "/opt/homebrew/bin/go"
+    },
+    "go.addTags": {
+        "tags": "json",
+        "options": "",
+        "promptForTags": false,
+        "transform": "camelcase"
+    },
+    // -- templ
+    "[templ]": {
+        "editor.defaultFormatter": "a-h.templ"
+    },
+    "tailwindCSS.includeLanguages": {
+        "templ": "html"
+    },
+    "emmet.includeLanguages": {
+        "templ": "html"
     },
     // -- dart
     "[dart]": {
