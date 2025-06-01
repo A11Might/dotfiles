@@ -50,6 +50,17 @@
     "vim.handleKeys": {
         "<C-d>": true,
     },
+    "vim.normalModeKeyBindingsNonRecursive": [
+        // flash.nvim
+        {
+            "before": [
+                "s"
+            ],
+            "commands": [
+                "flash-vscode.start"
+            ]
+        },
+    ],
     "vim.normalModeKeyBindings": [
         {
             "before": [
@@ -165,13 +176,52 @@
             ]
         },
         {
-            // go to implementation
+            // references
             "before": [
                 "g",
-                "i"
+                "r"
+            ],
+            "commands": [
+                "editor.action.goToReferences"
+            ]
+        },
+        {
+            // goto implementation
+            "before": [
+                "g",
+                "I"
             ],
             "commands": [
                 "editor.action.goToImplementation"
+            ]
+        },
+        {
+            // goto t[y]pe definition
+            "before": [
+                "g",
+                "y"
+            ],
+            "commands": [
+                "editor.action.goToTypeDefinition"
+            ]
+        },
+        {
+            // goto declaration
+            "before": [
+                "g",
+                "D"
+            ],
+            "commands": [
+                "editor.action.goToDeclaration"
+            ]
+        },
+        {
+            // hover
+            "before": [
+                "K"
+            ],
+            "commands": [
+                "editor.action.showHover"
             ]
         },
         {
