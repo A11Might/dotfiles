@@ -1,6 +1,8 @@
-[manager]
-
+[mgr]
 prepend_keymap = [
 	{ on = "q",     run = "quit --no-cwd-file", desc = "Exit the process without writing cwd-file" },
 	{ on = "Q",     run = "quit",               desc = "Exit the process" },
+  { on = "S", run = 'shell "$SHELL" --block --confirm', desc = "Open a new  shell in the current directory"},
+	{ on = "<C-p>", run = "plugin fzf", desc = "Jump to a directory or reveal a file using fzf" },
+	{ on = "<C-g>", run = "shell --confirm --block lazygit", desc = "Open lazygit in the current directory" },
 ]

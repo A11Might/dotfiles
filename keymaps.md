@@ -58,6 +58,16 @@
 | `<prefix>q`  |             | cancel                    |
 | `<prefix>]`  |             | paste                     |
 
+## Yazi
+
+| key   | command | description        |
+|-------|---------|--------------------|
+| `q`     |         | exit               |
+| `Q`     |         | exit (cwd)         |
+| `S`     |         | open a shell (cwd) |
+| `<C-p>` |         | fzf search (cwd)   |
+| `<C-g>` |         | open lazygit (cwd) |
+
 ## LazyVim
 
 ### General
