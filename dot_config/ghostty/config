@@ -1,0 +1,3 @@
+theme = Everforest Dark   Hard
+# https://github.com/hackr-sh/ghostty-shaders
+custom-shader = cursor_blaze.glsl
